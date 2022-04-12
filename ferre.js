@@ -1,4 +1,4 @@
-let nombreIngresad = prompt("Ingresar nombre");
+/*let nombreIngresad = prompt("Ingresar nombre");
 let apellidoIngresado = prompt("Ingresar apellido");
 
 if ((nombreIngresad != "") && (apellidoIngresado != "")) {
@@ -13,4 +13,4 @@ alert("Deberías recibir " + (dolaresACambiar * valorDolarUsa) + " pesos ");
 let cuadro = prompt("ingrese club");
 alert(cuadro + " " + "campeon");
 
-
+*/
