@@ -41,17 +41,17 @@ function calculadora (primerNumero, segundoNumero, operacion) {
 }
 let resultado = calculadora(12, 3, "/");
 alert("Tu resultado es = " + resultado);
-
 */
-  //Función para calcular el índice de masa corporal (IMC)
-  function CalcularIMC(sexo, altura, peso) 
-  {
     
+  //Función para calcular el índice de masa corporal (IMC)
+    function CalcularIMC(sexo, altura, peso) 
+  {
+    //La función Math.roud sirve para redondear valores
     altura = Math.round(altura) / 100;
     peso = Math.round(peso);
     
-    var indice = (peso / Math.pow(altura, 2));
-    var resultado = "";
+    let indice = (peso / Math.pow(altura, 2));
+    let resultado = "";
     //Sexo, si es "m" mujer y si es "h" hombre
     switch (sexo)
     {
@@ -101,15 +101,20 @@ alert("Tu resultado es = " + resultado);
   //Función para mostrar el resultado por pantalla
   function MostrarResultadoIMC (sexo, altura, peso, indice)
   {
-    var mensaje = "Usted mide " + altura / 100 + " metros y pesa " + peso + " Kg. \n \n " + indice;
+    let mensaje = "Usted mide " + altura / 100 + " metros y pesa " + peso + " Kg. \n \n " + indice;
     alert (mensaje);
   }	
 
   //Petición de datos al usuario (sexo, altura, peso)
-  var sexo = prompt("Indique su sexo, una 'h' para hombre o una 'm' para mujer:", "");
-  
-  var altura = parseInt(prompt("Indique su altura en centímetros:", ""));
-  var peso = parseInt(prompt("Indique su peso en kilógramos:", ""));
-
-  var resultado = CalcularIMC(sexo, altura, peso);
+  const imc = [];
+  let sexo = prompt("Indique su sexo, una 'h' para hombre o una 'm' para mujer:", "");
+    imc.push(sexo);
+  let altura = parseInt(prompt("Indique su altura en centímetros:", ""));
+    imc.push(altura);
+  let peso = parseInt(prompt("Indique su peso en kilógramos:", ""));
+    imc.push(peso);
+    console.log(imc);
+  let resultado = CalcularIMC(sexo, altura, peso);
   MostrarResultadoIMC(sexo, altura, peso, resultado);  
+  console.log(imc.length);
+  
